@@ -16,12 +16,12 @@ func max_element_position(a []int, size int) (int, int) {
 
 func main() {
     var size, pos, value, i int
-    var a [10] int
+    a := make([]int, 10)
     fmt.Scanf("%d", &size)
     for i = 0; i < size; i++ {
         fmt.Scanf("%d", &a[i])
     }
-    pos, value = max_element_position(a[:], size)
+    pos, value = max_element_position(a, size)
     if pos != -1 {
         fmt.Printf("%d\n%d", pos, value);
     }
